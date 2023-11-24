@@ -22,3 +22,9 @@ Route::get('/home', function () {
         'title' => 'Home'
     ]);
 });
+
+Route::get('/kasir', function () {
+    return view('kasir', [
+        'title' => 'Kasir'
+    ]);
+});
