@@ -47,15 +47,15 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Kasir
                             </a>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <a class="nav-link {{ $title === 'Form' ? 'active' : '' }}" href="/form">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Kategori
                             </a>                           
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Produk 
                             </a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Laporan
                             </a>
@@ -78,9 +78,7 @@
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; TOKO INDAH KAYLA</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
+
                             </div>
                         </div>
                     </div>

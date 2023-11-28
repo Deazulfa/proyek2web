@@ -28,3 +28,15 @@ Route::get('/kasir', function () {
         'title' => 'Kasir'
     ]);
 });
+
+Route::get('/form', function () {
+    return view('form', [
+        'title' => 'Form'
+    ]);
+});
+
+Route::get('/input', function () {
+    return view('input_data', [
+        'title' => 'Input Data'
+    ]);
+});

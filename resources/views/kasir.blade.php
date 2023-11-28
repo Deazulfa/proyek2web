@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Kasir Form</h2>
+        <h2 class="text-center mb-4">Kasir</h2>
 
         <form id="pointOfSaleForm">
             <div class="mb-3">
@@ -41,7 +41,7 @@
             <strong>Total:</strong> <span id="totalAmount">0</span>
         </div>
 
-        <button type="button" class="btn btn-primary mt-3" onclick="printReceipt()">BAYAR</button>
+        <button type="button" a href="nota_belanja.blade.php" class="btn btn-primary mt-3" onclick="printReceipt()">BAYAR</button>
     </div>
 
     <script>
