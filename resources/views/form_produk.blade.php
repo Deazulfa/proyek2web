@@ -53,11 +53,14 @@
             <!-- Tambahkan kategori lain sesuai kebutuhan -->
         </select>
 
-        <label for="harga">Harga:</label>
-        <input type="number" id="harga" name="harga" required>
-
         <label for="stok">Stok:</label>
         <input type="number" id="stok" name="stok" required>
+
+        <label for="harga">Harga Jual:</label>
+        <input type="number" id="harga_jual" name="harga_jual" required>
+
+        <label for="harga">Harga Beli:</label>
+        <input type="number" id="harga_beli" name="harga_beli" required>
 
         <button type="submit">Submit</button>
     </form>

@@ -46,3 +46,15 @@ Route::get('/penjualan', function () {
         'title' => 'Penjualan'
     ]);
 });
+
+Route::get('/kategori', function () {
+    return view('kategori', [
+        'title' => 'kategori'
+    ]);
+});
+
+Route::get('/produk', function () {
+    return view('produk', [
+        'title' => 'produk'
+    ]);
+});
