@@ -40,3 +40,9 @@ Route::get('/input', function () {
         'title' => 'Input Data'
     ]);
 });
+
+Route::get('/penjualan', function () {
+    return view('penjualan', [
+        'title' => 'Penjualan'
+    ]);
+});
