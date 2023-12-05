@@ -52,9 +52,6 @@
     </style>
 <body>
     <form>
-        <label for="idbarang">KODE BARANG</label>
-        <input type="text" id="idbarang" name="idbarang" required>
-
         <label for="namabarang">NAMA PRODUK/BARANG</label>
         <input type="text" id="namabarang" name="namabarang" required>
 
@@ -67,7 +64,7 @@
         <label for="hargabeli">HARGA BELI</label>
         <input type="text" id="hargabeli" name="hargabeli" required>
 
-        <a class="btn btn-primary" type="submit" href="/kategori">Submit</a>
+        <a class="btn btn-primary" type="submit" href="/produk">Submit</a>
     </form>
     
 </body>

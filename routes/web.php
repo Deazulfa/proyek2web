@@ -36,6 +36,12 @@ Route::get('/form_kategori', function () {
     ]);
 });
 
+Route::get('/form_produk', function () {
+    return view('form_produk', [
+        'title' => 'Form_produk'
+    ]);
+});
+
 Route::get('/input', function () {
     return view('input_data', [
         'title' => 'Input Data'
