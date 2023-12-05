@@ -12,24 +12,27 @@
         <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
     </div>
 </form>
-<table class="table" >
+<table class="table mt-4">
     <thead>
         <tr>
-            <th>KODE KATEGORI</th>
-            <th>NAMA KATEGORI BARANG</th>
-            <th>AKSI</th>
+            <th scope="col">KODE KATEGORI</th>
+            <th scope="col">NAMA KATEGORI</th>
+            <th scope="col">AKSI</th>
         </tr>
     </thead>
-    <tbody>
-            <tr>
-                <td>kiki </td>
-                <td>kiki</td>
-                <td>kiki</td>
-            </tr>
-            <tr>
-            </tr>
-    </tbody>
+    <tbody id="itemList"></tbody>
 </table>
 </div>
+<script>
+    function addItem() {
+        var kategoriName = document.getElementById('kategoriName').value;
+        var itemList = document.getElementById('itemList');
+        var row = itemList.insertRow();
+        
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);}
+</script>
 
 @endsection

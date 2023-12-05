@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::get('/kasir', function () {
     ]);
 });
 
+
 Route::get('/nota', function () {
     return view('nota', [
         'title' => 'Nota'
@@ -39,6 +41,19 @@ Route::get('/nota', function () {
 Route::get('/form', function () {
     return view('form', [
         'title' => 'Form'
+    ]);
+});
+
+Route::get('/form_kategori', function () {
+    return view('form_kategori', [
+        'title' => 'Form_kategori'
+    ]);
+});
+
+Route::get('/form_produk', function () {
+    return view('form_produk', [
+        'title' => 'Form_produk'
+
     ]);
 });
 
@@ -65,3 +80,5 @@ Route::get('/produk', function () {
         'title' => 'produk'
     ]);
 });
+
+Route::get('/kategori/store', [KategoriController::class, 'store'])->name('kategori.store');

@@ -1,11 +1,28 @@
 @extends('layout.main')
 
 @section('content')
-    <title>Kategori Barang</title>
+<main>
+    <div class="container-fluid px-4">
+    <div class="container mt-5">
+    <title>Input Data Barang</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
 
         label {
@@ -13,17 +30,17 @@
             margin-bottom: 8px;
         }
 
-        input, select {
+        input {
             width: 100%;
             padding: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 16px;
             box-sizing: border-box;
         }
 
         button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -33,36 +50,40 @@
             background-color: #45a049;
         }
     </style>
-</head>
 <body>
+    <form>
+        <label for="namabarang">NAMA PRODUK/BARANG</label>
+        <input type="text" id="namabarang" name="namabarang" required>
 
-    <h2>Kategori Barang</h2>
-    <form action="proses_form.php" method="post">
+        <label for="stok">STOK</label>
+        <input type="text" id="stok" name="stok" required>
 
-        <label for="nama_barang">Nama Barang:</label>
-        <input type="text" id="nama_barang" name="nama_barang" required>
+        <label for="hargajual">HARGA JUAL</label>
+        <input type="text" id="hargajual" name="hargajual" required>
 
-        <label for="kategori">Kategori:</label>
-        <select id="kategori" name="kategori" required>
-            <option value="Rokok">Rokok</option>
-            <option value="Sabun">Sabun</option>
-            <option value="Minuman">Minuman</option>
-            <option value="Makanan Ringan">Makanan Ringan</option>
-            <option value="Mie">Mie</option>
-            <option value="Kopi">Kopi</option>
-            <!-- Tambahkan kategori lain sesuai kebutuhan -->
-        </select>
+        <label for="hargabeli">HARGA BELI</label>
+        <input type="text" id="hargabeli" name="hargabeli" required>
 
-        <label for="stok">Stok:</label>
-        <input type="number" id="stok" name="stok" required>
-
-        <label for="harga">Harga Jual:</label>
-        <input type="number" id="harga_jual" name="harga_jual" required>
-
-        <label for="harga">Harga Beli:</label>
-        <input type="number" id="harga_beli" name="harga_beli" required>
-
-        <button type="submit">Submit</button>
+        <a class="btn btn-primary" type="submit" href="/produk">Submit</a>
     </form>
+    
+</body>
+</div>
+</div>
+</main>
 
+<script>
+    function addItem() {
+        var kategoriName = document.getElementById('kategoriName').value;
+        var itemList = document.getElementById('itemList');
+        var row = itemList.insertRow();
+        
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        cell1.innerHTML = kategoriName;
+        document.getElementById('kategoriName').value = '';}
+</script>
 @endsection
+
