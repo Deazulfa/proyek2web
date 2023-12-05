@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,12 @@ Route::get('/home', function () {
 Route::get('/kasir', function () {
     return view('kasir', [
         'title' => 'Kasir'
+    ]);
+});
+
+Route::get('/nota', function () {
+    return view('nota', [
+        'title' => 'Nota'
     ]);
 });
 
