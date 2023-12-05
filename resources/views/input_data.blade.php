@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layout.main');
+
+@section('content')
+<main>
+    <div class="container-fluid px-4">
+    <div class="container mt-5">
     <title>Input Data Barang</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #fff;
             margin: 0;
             padding: 0;
             display: flex;
@@ -49,7 +50,6 @@
             background-color: #45a049;
         }
     </style>
-</head>
 <body>
     <form>
         <label for="productName">Nama Barang:</label>
@@ -64,4 +64,7 @@
         <button type="submit">Submit</button>
     </form>
 </body>
-</html>
+</div>
+</div>
+</main>
+@endsection
