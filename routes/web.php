@@ -33,7 +33,7 @@ Route::get('/kasir', function () {
 
 
 Route::get('/nota', function () {
-    return view('nota', [
+    return view('nota_belanja', [
         'title' => 'Nota'
     ]);
 });
@@ -82,3 +82,4 @@ Route::get('/produk', function () {
 });
 
 Route::get('/kategori/store', [KategoriController::class, 'store'])->name('kategori.store');
+Route::get('/input_data/store', [InputdataController::class, 'store'])->name('input_data.store');
