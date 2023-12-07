@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KategoriController;
 
 /*
@@ -30,6 +31,19 @@ Route::get('/kasir', function () {
     ]);
 });
 
+
+Route::get('/nota', function () {
+    return view('nota_belanja', [
+        'title' => 'Nota'
+    ]);
+});
+
+Route::get('/form', function () {
+    return view('form', [
+        'title' => 'Form'
+    ]);
+});
+
 Route::get('/form_kategori', function () {
     return view('form_kategori', [
         'title' => 'Form_kategori'
@@ -39,6 +53,7 @@ Route::get('/form_kategori', function () {
 Route::get('/form_produk', function () {
     return view('form_produk', [
         'title' => 'Form_produk'
+
     ]);
 });
 
@@ -68,3 +83,4 @@ Route::get('/produk', function () {
 
 Route::post('/simpan_kategori', 'KategoriController@simpan');
 Route::get('/kategori/store', [KategoriController::class, 'store'])->name('kategori.store');
+Route::get('/input_data/store', [InputdataController::class, 'store'])->name('input_data.store');
