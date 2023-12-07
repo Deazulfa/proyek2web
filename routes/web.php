@@ -66,4 +66,5 @@ Route::get('/produk', function () {
     ]);
 });
 
+Route::post('/simpan_kategori', 'KategoriController@simpan');
 Route::get('/kategori/store', [KategoriController::class, 'store'])->name('kategori.store');

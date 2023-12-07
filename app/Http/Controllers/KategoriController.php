@@ -10,7 +10,7 @@ class KategoriController extends Controller
     public function store(Request $request)
     {
         $kategori = new Kategori();
-        $kategori->nama_kategori = $request->input('nama_kategori');
+        $kategori->nama = $request->input('nama_kategori');
         $kategori->save();
 
         return redirect()->back()->with('success', 'Kategori barang berhasil disimpan');

@@ -51,9 +51,10 @@
         }
     </style>
 <body>
-    <form>
+    <form method="POST" action="/simpan_kategori">
+        @csrf
         <label for="kategoriName">Nama Kategori:</label>
-        <input type="text" id="kategoriName" name="kategoriName" required>
+        <input type="text" id="kategoriName" name="nama_kategori" required>
 
         <a class="btn btn-primary" type="submit" href="/kategori">Submit</a>
     </form>
