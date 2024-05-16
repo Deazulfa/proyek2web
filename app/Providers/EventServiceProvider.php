@@ -18,6 +18,9 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        App\Notifications\StokNotification::class => [
+            App\Channels\FonnteChannel::class,
+        ],
     ];
 
     /**
